@@ -9,12 +9,15 @@ public class Medic extends Alarm {
     String[] travMatolog = {"Иванов", "Чебурахин", "Павлов"};
     String[] hiRurg = {"Петров", "Александров", "Чистяков"};
     String[] carDiolog = {"Черепанов", "Сидоров", "Бахрушин"};
-
-    public void print() {
+    // Вывод в консоль
+    public void print(String name) {
         choiceMedic();
-        System.out.println("Заявка будет передана врачу " + spec);
+        System.out.println("Пациент  " + name + " врач " + spec);
+        System.out.println();
+        System.out.println();
     }
 
+    // Выбор напрвления специалиста
     public void specialist() {
 
         System.out.println("Если травматолог введите 1");
@@ -27,7 +30,7 @@ public class Medic extends Alarm {
 
 
     }
-
+    //выбор непосредственно врача,рандомно.
     public String choiceMedic() {
         specialist();
         int r;
@@ -35,12 +38,15 @@ public class Medic extends Alarm {
         r = rand.nextInt(3);
         switch (medPeople) {
             case 1:
+                super.allSpecialist(travMatolog);
                 spec = travMatolog[r];
                 break;
             case 2:
+                super.allSpecialist(hiRurg);
                 spec = hiRurg[r];
                 break;
             case 3:
+                super.allSpecialist(carDiolog);
                 spec = carDiolog[r];
                 break;
             default:

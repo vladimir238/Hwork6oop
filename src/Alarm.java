@@ -10,33 +10,30 @@ public class Alarm {
         this.phone = setPhone(phone);
     }
 
-    public int getAge() {
-        return age;
-    }
 
-    public String getPhone() {
-        return phone;
-    }
-
+// Конструктор без параметров
     public Alarm() {
         this("Неизвестен", 0, "000000000000");
 
     }
-
+    // Вывод параметров конструктора
     public void print() {
         System.out.println("Имя " + name + "  Возраст " + age + "  Телефон " + phone);
     }
 
+
+
+    // Проверка введенного возраста пациента
     public int setAge(int age) {
         this.age = age;
         if (age < 0 || age > 100) {
-            System.out.println("Возраст введен некорректно" + age);
+            System.out.println("Возраст введен некорректно   " + age);
             age = 0;
         }
         return age;
 
     }
-
+    //Проверка корректности введенного номера телефона
     public String setPhone(String phone) {
         this.phone = phone;
         if (phone.length() > 12 || phone.length() < 11) {
@@ -47,5 +44,12 @@ public class Alarm {
         return phone;
 
 
+    }
+    // Вывод всех врачей направления
+    public void allSpecialist(String[] medSpec){
+        System.out.println("Список всех врачей данного направления");
+        for (String k: medSpec){
+            System.out.println(k);
+        }
     }
 }
