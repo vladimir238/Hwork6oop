@@ -1,16 +1,19 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
-        Alarm alarm= new Alarm("Плешков",24,"89934456789",2);
-        alarm.print();
-        if (alarm.getWho()==2){
-            Medic pacient1=new Medic();
-            pacient1.print();
-            pacient1.specialist();
+        Alarm pacient1 = new Alarm("Авилов", 35, "89265748967");
+        Alarm pacient2 = new Alarm("Плешков", 24, "89934456789");
+        Medic medic = new Medic();
+        pacient1.print();
+        medic.print();
 
-        }
-
+        pacient2.print();
 
 
 
     }
+
+
 }
+

@@ -2,21 +2,24 @@ public class Alarm {
     public String name;
     private int age;
     private String phone;
-    private int who;
 
-    public Alarm(String name, int age, String phone,int who) {
+
+    public Alarm(String name, int age, String phone) {
         this.name = name;
         this.age = setAge(age);
         this.phone = setPhone(phone);
-        this.who = who;
     }
 
-    public int getWho() {
-        return who;
+    public int getAge() {
+        return age;
+    }
+
+    public String getPhone() {
+        return phone;
     }
 
     public Alarm() {
-        this("Неизвестен", 0, "000000000000",2);
+        this("Неизвестен", 0, "000000000000");
 
     }
 
