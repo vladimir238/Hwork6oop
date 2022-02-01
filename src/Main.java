@@ -7,8 +7,8 @@ public class Main {
         Medic medic = new Medic();
         pacient1.print();
         medic.print();
+        System.out.println("Пациент  "+ pacient1.name +" Врач " + medic.spec);
 
-        pacient2.print();
 
 
 
